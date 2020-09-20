@@ -41,8 +41,8 @@ function MyApp() {
   );
 }
 ```
-![alt text](https://raw.githubusercontent.com/gabimig/folding-side-menu/master/collapsed.PNG)
-![alt text](https://raw.githubusercontent.com/gabimig/folding-side-menu/master/expanded.PNG)
+![alt text](https://raw.githubusercontent.com/gabimig/FoldingSideMenu/master/collapsed.PNG)
+![alt text](https://raw.githubusercontent.com/gabimig/FoldingSideMenu/master/expanded.PNG)
 
 ## User guide
 
@@ -54,5 +54,5 @@ Displays a side menu that collapse and expand when mouse over
 
 | Prop name | Type | Description | Default value |
 | ------------- | ------------- | ------------- | ------------- |
-| menuItems | {text: string,&nbsp;path: string,&nbsp;icon?: React.ReactElement,&nbsp;rootingElement?: ({ children }: {children: React.ReactElement}) => React.ReactElement&nbsp;}[] | List of items in the menu  | [] |
+| menuItems | {text: string,<br>path: string,<br>icon?: React.ReactElement,<br>rootingElement?: ({ children }: {children: React.ReactElement}) => React.ReactElement<br>}[] | List of items in the menu  | [] |
 | labelComp | React.ReactElement | React component that will be shown in the top margin of the Paper instead of the title. This option will make title prop disabled. | undefined |
