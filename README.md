@@ -54,5 +54,16 @@ Displays a side menu that collapse and expand when mouse over
 
 | Prop name | Type | Description | Default value |
 | ------------- | ------------- | ------------- | ------------- |
-| menuItems | {<br> text: string,<br> path: string,<br> icon?: React.ReactElement,<br>  rootingElement?: ({ children }: {children: React.ReactElement}) => React.ReactElement<br>}[] | List of items in the menu  | [] |
-| labelComp | React.ReactElement | React component that will be shown in the top margin of the Paper instead of the title. This option will make title prop disabled. | undefined |
+| menuItems | MenuItem[] | List of items in the menu  | [] |
+| openMenuCSS | CSSProperties | CSS props of the menu when is open. | undefined |
+| closeMenuCSS | CSSProperties | CSS props of the menu when is closed. | undefined |
+| menuItemCSS | CSSProperties | CSS props of the menu items. | undefined |
+| topMarginItems | number? | margin-top of the list of items. | undefined |
+```tsx
+type MenuItem = {
+    text: string,
+    path?: string,
+    icon?: React.ReactElement,
+    rootingElement?: ({ children }: {children: React.ReactElement}) => React.ReactElement
+}
+```
