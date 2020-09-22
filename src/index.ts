@@ -1,3 +1,4 @@
-import PaperLabeled from  './component/SideMenu'
+import SideMenu, { MenuItem } from  './component/SideMenu'
 
-export default PaperLabeled
+export { MenuItem }
+export default SideMenu

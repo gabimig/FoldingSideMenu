@@ -19,7 +19,7 @@ type CSSProps = {
 
 export type MenuItem = {
     text: string,
-    path: string,
+    path?: string,
     icon?: React.ReactElement,
     rootingElement?: ({ children }: {children: React.ReactElement}) => React.ReactElement
 }
