@@ -41,6 +41,58 @@ function MyApp() {
   );
 }
 ```
+
+Example of ussage integrated wit react-router-doom
+
+```tsx
+import React from 'react'
+import PaperLabeled from 'folding-side-menu'
+import { Link } from 'react-router-dom'
+
+function MyApp() {
+  
+  const menuItems: MenuItem[] = [
+    {
+        text: 'Main',
+        icon: <HomeIcon fontSize="large" />,
+        rootingElement: ({ children }: {children: React.ReactElement}) => (
+            <Link className={classes.linkText} to="/">
+                {children}
+            </Link>
+        ),
+    },
+    {
+        text: 'Reports',
+        icon: <ReportIcon fontSize="large" />,
+        rootingElement: ({ children }: {children: React.ReactElement}) => (
+            <Link className={classes.linkText} to="/Report">
+                {children}
+            </Link>
+        ),
+    },
+    {
+        text: 'Settings',
+        icon: <SettingsIcon fontSize="large" />,
+        rootingElement: ({ children }: {children: React.ReactElement}) => (
+            <Link className={classes.linkText} to="/Settings">
+                {children}
+            </Link>
+        ),
+    },
+  ]
+
+  return (
+    <SideMenu menuItems={menuItems} />
+    <div className={classes.content}>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Report" component={Report} />
+            <Route exact path="/Settings" component={Settings} />
+        </Switch>
+    </div>
+  );
+}
+```
 ![alt text](https://raw.githubusercontent.com/gabimig/FoldingSideMenu/master/collapsed.PNG)
 ![alt text](https://raw.githubusercontent.com/gabimig/FoldingSideMenu/master/expanded.PNG)
 
