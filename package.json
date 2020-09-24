@@ -1,6 +1,6 @@
 {
   "name": "folding-side-menu",
-  "version": "1.1.6",
+  "version": "1.1.9",
   "description": "Side menu that expand on mouse over.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

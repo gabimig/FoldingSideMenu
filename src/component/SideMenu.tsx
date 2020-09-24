@@ -127,15 +127,19 @@ const SideMenu = ({
                     )
                     if (menuItem.rootingElement) {
                         return (
-                            <menuItem.rootingElement key={`menmu-item-${menuItem.text}`}>
-                                {innerContent}
-                            </menuItem.rootingElement>
+                            <li key={`menmu-item-${menuItem.text}`}>
+                                <menuItem.rootingElement>
+                                    {innerContent}
+                                </menuItem.rootingElement>
+                            </li>
                         )
                     }
                     return (
-                        <Link key={`menmu-item-${menuItem.text}`} href={menuItem.path} className={classes.linkText}>
-                            {innerContent}
-                        </Link>
+                        <li key={`menmu-item-${menuItem.text}`}>
+                            <Link href={menuItem.path} className={classes.linkText}>
+                                {innerContent}
+                            </Link>
+                        </li>
                     )
                 })}
             </List>
