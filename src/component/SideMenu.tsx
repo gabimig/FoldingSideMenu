@@ -127,7 +127,7 @@ const SideMenu = ({
                     )
                     if (menuItem.rootingElement) {
                         return (
-                            <menuItem.rootingElement>
+                            <menuItem.rootingElement key={`menmu-item-${menuItem.text}`}>
                                 {innerContent}
                             </menuItem.rootingElement>
                         )
